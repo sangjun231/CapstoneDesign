@@ -23,6 +23,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        setTitle("떡잎방범대")
+
         creatuserbtn.setOnClickListener {
             val intent = Intent(this, JoinActivity::class.java)
             startActivity(intent)
@@ -45,8 +47,8 @@ class LoginActivity : AppCompatActivity() {
                     //비번맞으면
                     if(child.child("pw").value.toString().equals(editTextPW.text.toString())){
 
-                        //맞으면 재고관리 페이지로
-                        val intent2 = Intent(this@LoginActivity, StockActivity::class.java)
+                        //맞으면 메뉴 페이지로
+                        val intent2 = Intent(this@LoginActivity, MenuActivity::class.java)
                         //id넘김=>얘로 나중에 사용자누군지 계속 구분해야지
                         intent2.putExtra("userId",child.key.toString())
                         //Toast.makeText(applicationContext, child.key.toString(), Toast.LENGTH_LONG).show()

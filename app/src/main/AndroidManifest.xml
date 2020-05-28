@@ -18,7 +18,8 @@
         </activity>
 
         <activity android:name=".JoinActivity" />
-        <activity android:name=".StockActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".MyPageActivity" />
 
     </application>
 

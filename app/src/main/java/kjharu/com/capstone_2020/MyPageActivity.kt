@@ -3,9 +3,9 @@ package kjharu.com.capstone_2020
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_stock.*
+import kotlinx.android.synthetic.main.activity_mypage.*
 
-class StockActivity : AppCompatActivity(){
+class MyPageActivity : AppCompatActivity() {
     val firebaseReference: FirebaseDatabase = FirebaseDatabase.getInstance()
     val databaseUser = firebaseReference.reference.child("user")
 
@@ -13,10 +13,10 @@ class StockActivity : AppCompatActivity(){
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stock)
-
+        setContentView(R.layout.activity_mypage)
+        setTitle("떡잎방범대 마이페이지")
         userId = intent.getStringExtra("userId")
-        editTextShowId.setText(userId)
+        textView7.setText(userId)
 
     }
 }
